@@ -1,0 +1,144 @@
+ //覆盖一些vant-ui样式 覆盖css样式可在这里添加
+
+
+.app{
+
+  .van-tab--active { 
+    color:$color-primary;
+  }
+  .van-tabs__line{
+    background-color:$color-primary;
+  }
+  .van-tabbar-item--active{
+    color: $color-primary;
+  }
+
+  .van-nav-bar { 
+    box-shadow: 0px 2px 2px rgba(153, 153, 153, 0.3);
+  }
+
+  .van-nav-bar .van-icon {
+    color: $color-black;
+  }
+
+  .van-nav-bar__text {
+    color: $color-yellow;
+    font-size: 12px;
+  }
+
+  .van-button--primary {
+    background-color:$color-primary;
+    border: 0;
+  }
+  .van-button--plain   {
+    background-color: #FFF;
+    color: $color-primary;
+    border:1px solid $color-primary;
+    border-radius: 2px;
+  }
+  .van-button--disabled {
+    background-color:#DDD;
+    color:#fff;
+    border: 0;
+  }
+
+  .van-submit-bar .van-button--disabled {
+    background-color:#ccc;
+    color:#fff;
+    border: 0;
+  }
+
+  .van-button--large {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+    height: 40px;
+    line-height: 38px;
+  }
+
+  .van-swipe__indicators {
+    bottom: 50px;
+  }
+
+
+  .van-tag--primary {
+    background-color: $color-primary;
+  }
+  .van-tag--primary .van-tag--plain {
+    background-color: #FFF;
+    color: $color-primary;
+  }
+  .van-button--danger {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+  .van-button--warning {
+    background-color: #999;
+    border: 1px solid #999;
+  }
+
+  .van-submit-bar{
+    border-top: 1px solid #eee;
+    &__price {
+      text-align: left;
+      padding-left: 15px; 
+      font-size: 14px;
+      color: #999;
+      &-integer{
+        color: $color-primary;
+      }
+      &-decimal{
+        color: $color-primary;
+      }
+    }
+  }
+ 
+  .van-radio .van-icon-checked {
+    color: $color-primary;
+  }
+  .van-checkbox--checked{
+    border-color: $color-primary;
+    background-color: $color-primary;
+  }
+
+  .nav-bar .search-btn .van-button--small{
+    padding: 0;
+    min-width: 40px;
+  }
+
+  .feedback-wrap .van-icon{
+    color: #30B08F;
+  }
+
+  .van-swipe-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+
+}
+
+.van-dialog .van-dialog__confirm {
+  color:$color-primary;
+}
+.van-dialog .van-dialog__confirm:active {
+  color:$color-primary;
+}
+
+.van-toast--top {
+  top:150px;
+}
+
+.van-toast--top {
+  width:85%;
+}
+ 
+
+// .van-dialog .van-dialog__confirm{
+//   background-color:$color-primary;
+//   color:$color-white; 
+// }
+// .van-dialog .van-dialog__header{
+//   border-bottom:1px solid $color-black-tint;
+// }

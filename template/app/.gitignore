@@ -1,0 +1,5 @@
+# Deploy
+.vscode/
+node_modules/
+public/mobile
+public/franchise.html
