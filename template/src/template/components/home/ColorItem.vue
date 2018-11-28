@@ -2,7 +2,7 @@
   <div class="color-item">
     <home-item :name="name">
       <div :style="getStyle()" class="color-item__value">
-        {{value}}
+        \{{value}}
       </div>
     </home-item>
   </div>
