@@ -8,18 +8,13 @@
 
 ### 安装vue-cli
 
-vue-cli可以按模板生成一个Vue工程
-安装：npm install -g vue-cli
-
-
-### 定制自已的模板
-相关文档：
-[基本介绍](./static/readme.md)  
-[使用说明](./static/reference.md)  
-
+vue-cli可以按模板生成一个Vue工程<br>
+安装：
+```
+npm install -g vue-cli
+```
 
 ## 初始化
-
 
 执行以下命令，并按提示输入相关信息
 ```
