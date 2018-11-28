@@ -33,7 +33,5 @@ export default {
   &__name {
     flex: 1;
   }
-  &__value {
-  }
 }
 </style>

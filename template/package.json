@@ -1,8 +1,8 @@
 {
-  "name": "mobile-marketing",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "mobile-marketing",
-  "author": "MWT",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "private": true,
   "scripts": {
     "dev": "cross-env port=8000 webpack-dev-server --progress --config build/webpack.dev.conf.js",
