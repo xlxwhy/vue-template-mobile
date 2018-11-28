@@ -3,7 +3,7 @@
     <van-nav-bar left-arrow :title="title" :left-text="back.text" @click-left="onClickBack()" @click-right="onClickAction()">
       <div slot="right">
         <div v-if="action.show">
-          {{action.buttons[action.value].text}}
+          {{ action.buttons[action.value].text }}
         </div>
         <slot name="right"></slot>
       </div>
