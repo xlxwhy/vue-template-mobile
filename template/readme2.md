@@ -1,15 +1,11 @@
 
-## Template文档
-
-建议在GitLab中查看此文档，或者使用markdown相关工具查看<br>
-http://192.168.0.203:31590/XING/template-mobile/blob/master/static/readme.md<br>
-<br>
-
+## 概况
 
 此文档仅记录相关创建Template过程中所遇到的一些问题<br>
-如需了解如何使用Template，请参考：<br>
-http://192.168.0.203:31590/XING/template-mobile/blob/master/static/reference.md<br>
 
+
+[参考文档](./reference.md)  
+[使用说明](../README.md)  
 
 - 此文档仅记录
 
@@ -255,7 +251,10 @@ static文件夹
 
 参考文档：https://github.com/dwqs/blog/issues/56<br>
 
+参考官方模板：https://github.com/vuejs-templates/webpack
+生成自己的模板：https://github.com/xlxwhy/vue-template-mobile.git
 
+注：vue-cli不运行私服，只运行Github等线上平台
 
 
 ### 开发环境与生产环境不一致的情况
