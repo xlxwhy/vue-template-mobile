@@ -2,7 +2,7 @@
   <div class="template-tabbar">
     <van-tabbar v-model="model.active">
       <van-tabbar-item v-for="(item,i) in model.items" v-bind:key="i" :to="item.link">
-        <icon :name="item.icon" slot="icon" />{{item.name}}
+        <icon :name="item.icon" slot="icon" />\{{item.name}}
       </van-tabbar-item>
     </van-tabbar>
   </div>

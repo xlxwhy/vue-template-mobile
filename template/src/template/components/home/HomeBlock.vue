@@ -1,7 +1,7 @@
 <template>
   <div class="home-block">
     <div class="home-block__title">
-      {{title}}
+      \{{title}}
       <slot name='title' />
     </div>
     <div class="home-block__content">

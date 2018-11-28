@@ -38,7 +38,7 @@
           <div v-if="test.api.state==2" class="success">
             <icon name="selected" />
           </div>
-          <div v-if="test.api.state==3" class="error">错误：{{test.api.message}}</div>
+          <div v-if="test.api.state==3" class="error">错误：\{{test.api.message}}</div>
         </home-item>
         <home-item name="测试404页面">
           <router-link :to="{path:'/nizhaobudaowo'}">点击查看</router-link>

@@ -1,10 +1,10 @@
 <template>
   <div class="home-item">
     <div class="home-item__name">
-      {{name}}
+      \{{name}}
     </div>
     <div class="home-item__value">
-      {{value}}
+      \{{value}}
       <slot/>
     </div>
   </div>
