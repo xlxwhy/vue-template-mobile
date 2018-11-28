@@ -3,8 +3,8 @@
 按模板生成一个Vue工程
 
 
-[相关问题](./template/static/readme.md)  
-[参考文档](./template/static/reference.md)  
+[相关问题](./template/readme.md)  
+[参考文档](./template/reference.md)  
 
 ### 安装vue-cli
 
