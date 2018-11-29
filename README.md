@@ -19,7 +19,7 @@ npm install -g vue-cli
 执行以下命令，并按提示输入相关信息
 ```
 vue init xlxwhy/vue-template-mobile myproject
-注：vue-cli不支持私服，只运行Github等线上平台
+注：vue-cli不支持私服，只支持Github等线上平台
 ```
 ## 运行
 执行以下命令
