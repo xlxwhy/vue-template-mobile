@@ -130,7 +130,7 @@ module.exports = new Promise((resolve, reject) => {
       var messages = ['Your application is running here:'];
       messages.push(`----------------------------------------------------------------------------------------------------`);
       for (var entry in devWebpackConfig.entry) {
-        messages.push(`${address}/${config.dev.openPage}${p(entry)}  or  ${address2}/${config.dev.openPage}  `);
+        messages.push(`${address}${config.dev.vuePublicPath}/${entry}/index.html${p(entry)}  or  ${address2}${config.dev.vuePublicPath}/${entry}/index.html  `);
       }
       messages.push(`----------------------------------------------------------------------------------------------------`);
       messages.push(`pls remember start your nginx service!!! [xsh nginx start]`);

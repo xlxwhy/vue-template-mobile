@@ -7,6 +7,7 @@ const path = require('path')
 const ip = require('ip')
 const glob = require('glob');
 const API_BASE_URL = 'http://www.mwt315.com'
+const VUE_PUBLIC_PATH = "/mobile"
 
 const allEntries = getAllEntries(path.resolve(__dirname, '../src/**/main.js'))
 const entries = getEntries(allEntries, process.env.entry)
@@ -18,9 +19,10 @@ module.exports = {
     entries: entries,
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/mobile',
-    openPage: `mobile/${Object.keys(entries)[0]}/index.html`,
+    assetsPublicPath: VUE_PUBLIC_PATH,
+    openPage: `${VUE_PUBLIC_PATH.substring(1)}/${Object.keys(entries)[0]}/index.html`,
 
+    vuePublicPath: VUE_PUBLIC_PATH,
     // Various Dev Server settings
     host: ip.address(), // can be overwritten by process.env.HOST
     port: process.env.port, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
@@ -61,7 +63,7 @@ module.exports = {
     entries: entries,
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../app/public/mobile'),
+    assetsRoot: path.resolve(__dirname, `../app/public${VUE_PUBLIC_PATH}`),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
 
