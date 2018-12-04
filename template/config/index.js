@@ -26,7 +26,7 @@ module.exports = {
     // Various Dev Server settings
     host: ip.address(), // can be overwritten by process.env.HOST
     port: process.env.port, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    domain: 'http://www.mwt315.com',
+    // domain: 'http://www.mwt315.com',
     apiBaseUrl: API_BASE_URL,
     autoOpenBrowser: true,
     errorOverlay: true,

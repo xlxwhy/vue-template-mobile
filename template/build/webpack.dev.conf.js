@@ -125,15 +125,24 @@ module.exports = new Promise((resolve, reject) => {
       // add port to devServer config
       devWebpackConfig.devServer.port = port
 
-      var address = `http://${devWebpackConfig.devServer.public}`;
-      var address2 = `${config.dev.domain}`;
-      var messages = ['Your application is running here:'];
+      let hostA = `http://${devWebpackConfig.devServer.public}`;
+      let hostB = `${config.dev.domain}`;
+      let messages = ['Your applications is running here:'];
       messages.push(`----------------------------------------------------------------------------------------------------`);
       for (var entry in devWebpackConfig.entry) {
-        messages.push(`${address}${config.dev.vuePublicPath}/${entry}/index.html${p(entry)}  or  ${address2}${config.dev.vuePublicPath}/${entry}/index.html  `);
+        let netAddressA = `${hostA}${config.dev.vuePublicPath}/${entry}/index.html${p(entry)}`;
+        let netAddressB = `${hostB}${config.dev.vuePublicPath}/${entry}/index.html`;
+        if (config.dev.domain) { 
+          messages.push(netAddressB)
+          messages.push(`${netAddressA}${p(entry)}or ${netAddressB}`);
+        } else {
+          messages.push(netAddressA)
+        }
       }
       messages.push(`----------------------------------------------------------------------------------------------------`);
-      messages.push(`pls remember start your nginx service!!! [xsh nginx start]`);
+      if (config.dev.domain) {
+        messages.push(`pls remember start your nginx service!!! [xsh nginx start]`);
+      }
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {

@@ -16,7 +16,7 @@ const requireAll = requireContext => requireContext.keys().map(requireContext)
 {{#useCommonLayer }}
 requireAll(require.context('common-layer/ui/icons/svg', false, /\.svg$/))
 {{/useCommonLayer }}
-requireAll(require.context('#/library/ui/icons/svg', false, /\.svg$/))   
+requireAll(require.context( "../../../library/ui/icons/svg" , false, /\.svg$/))   
 
 
 
