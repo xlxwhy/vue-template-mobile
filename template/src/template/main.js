@@ -23,7 +23,7 @@ router.beforeEach((to, from, next) => {
 
 {{#useCommonLayer }}
 import __axios_global from "common-layer/utils/http/global.js";
-import AuthConst from "common-layer/consts/AuthConst.js";
+import constant from "common-layer/consts/AuthConst.js";
 {{ else }}
 import __axios_global from "#/utils/http/global.js";
 import constant from "#/utils/http/constant.js";

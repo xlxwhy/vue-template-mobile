@@ -133,7 +133,6 @@ module.exports = new Promise((resolve, reject) => {
         let netAddressA = `${hostA}${config.dev.vuePublicPath}/${entry}/index.html${p(entry)}`;
         let netAddressB = `${hostB}${config.dev.vuePublicPath}/${entry}/index.html`;
         if (config.dev.domain) { 
-          messages.push(netAddressB)
           messages.push(`${netAddressA}${p(entry)}or ${netAddressB}`);
         } else {
           messages.push(netAddressA)
