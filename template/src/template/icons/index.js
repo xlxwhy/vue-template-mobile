@@ -2,7 +2,7 @@ import Vue from 'vue'
 {{#useCommonLayer }}
 import Icon from 'common-layer/ui/components/icon/Index.vue'// svg组件
 {{else}}
-import Icon from '#/library/ui/components/icon/Index.vue'// svg组件
+import Icon from '../../../library/ui/components/icon/Index.vue'// svg组件
 {{/useCommonLayer }}
 
 

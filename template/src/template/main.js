@@ -12,6 +12,9 @@ import VuePrototype from "common-layer/utils/vue/VuePrototype.js"
 import TokenUtil from "common-layer/utils/token/TokenUtil.js";
 Vue.prototype.$token = TokenUtil;
 Vue.prototype.$back = VuePrototype.back;
+{{else}}
+import VuePrototype from "#/utils/vue/VuePrototype.js"
+Vue.prototype.$back = VuePrototype.back;
 {{/useCommonLayer }}
 // 处理标题信息
 router.beforeEach((to, from, next) => {
