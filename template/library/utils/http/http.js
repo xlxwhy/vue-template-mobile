@@ -1,6 +1,6 @@
 import axios from 'axios'
 import Qs from 'qs'
-import constant from "./constant.js"
+import consts from "./consts.js"
 import Cookies from 'js-cookie'
 import global from "./global.js";//子工程可以改写
 axios.defaults.timeout = 15000;
@@ -15,7 +15,7 @@ axios.defaults.paramsSerializer = function (params) {
 axios.interceptors.request.use(
     config => {
         //Authorization
-        let authKey = constant.AuthKey.MEMBER;
+        let authKey = consts.AuthKey.MEMBER;
         if (global && global.AUTH_KEY) {
             authKey = global.AUTH_KEY;
         } else {
@@ -26,7 +26,7 @@ axios.interceptors.request.use(
             config.headers.Authorization = auth;
         }
         //openId
-        let openIdKey = constant.OPENID_KEY;
+        let openIdKey = consts.OPENID_KEY;
         if (global && global.OPENID_KEY) { openIdKey = global.OPENID_KEY; };
         let openId = Cookies.get(openIdKey)
         if (openId) {

@@ -5,8 +5,7 @@
 const fs = require('fs');
 const path = require('path')
 const ip = require('ip')
-const glob = require('glob');
-const API_BASE_URL = 'http://www.mwt315.com'
+const glob = require('glob'); 
 const VUE_PUBLIC_PATH = "/mobile"
 
 const allEntries = getAllEntries(path.resolve(__dirname, '../src/**/main.js'))
@@ -26,8 +25,7 @@ module.exports = {
     // Various Dev Server settings
     host: ip.address(), // can be overwritten by process.env.HOST
     port: process.env.port, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    // domain: 'http://www.mwt315.com',
-    apiBaseUrl: API_BASE_URL,
+    // domain: 'http://www.mwt315.com', 
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,

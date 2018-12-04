@@ -1,6 +1,6 @@
 
 import http from './http.js'
-import constant from './constant.js'
+import consts from './consts.js'
 import global from "./global.js"; 
 
 export default (data, success, error, method, url) => {
@@ -18,9 +18,9 @@ export default (data, success, error, method, url) => {
         } else {
             console.log(`WARNING: no auth error callback function! pls rewrite /http/global.api.authCallback `);
         }
-        if (res.data && res.data.code == constant.SUCCESS) {
+        if (res.data && res.data.code == consts.SUCCESS) {
             success && success(res.data);
-        } else if (res.data.code == constant.AUTH_ERROR) {
+        } else if (res.data.code == consts.AUTH_ERROR) {
             if (global.api && global.api.authCallback) {
                 global.api.authCallback(res.data)
             } else {
