@@ -1,10 +1,9 @@
 ## 基本介绍
 
-按模板生成一个Vue工程
+按模板生成一个移动端Vue工程
 
 
-[相关问题](./template/readme.md)  
-[参考文档](./template/reference.md)  
+[相关问题](./template/readme.md)   
 
 ### 安装vue-cli
 
@@ -30,7 +29,20 @@ npm run dev
 
 ```
 
+## 定制参数
 
+
+### 项目名
+
+### 描述
+
+### 作者
+
+### 是否使用common-layer
+
+common-layer是团体自身的依赖库，不存在于npm远程依赖库中。
+- 如果使用common-layer，需要使用【xsh npm i】来安装
+- 如果不使用common-layer，可以常规地使用【npm i】
 
 
 

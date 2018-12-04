@@ -3,8 +3,7 @@
 
 此文档仅记录相关创建Template过程中所遇到的一些问题<br>
 
-
-[参考文档](./reference.md)  
+ 
 [使用说明](../README.md)  
 
 - 此文档仅记录
@@ -245,6 +244,19 @@ static文件夹
 ### 运行生产环境
 
 增加app文件夹
+
+
+### 加载svg
+
+有三个地方可以存放svg文件：
+- A：/src/template/icons/svg
+- B：/library/ui/icons/svg
+- C：common-layer/ui/icons/svg
+
+默认是加载BC两个地方的svg，如果需要加载A地方的svg，需要按以下步骤处理：
+- /src/icons/index.js中增加：requireAll(require.context( "./svg" , false, /\.svg$/)) 
+- /build/webpack.base.conf.js中[module]>[rules]>[test: /\.svg$/]: 增加：resolve('src/[template]/icons/svg') 
+
 
 
 ### 创建vue init的模板

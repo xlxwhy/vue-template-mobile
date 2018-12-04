@@ -5,12 +5,9 @@
         <template-nav-bar title="Template Home" />
       </div>
 
-      <home-block title="Document">
-        <home-item name="查看帮助文档(本地)">
-          <a href="./static/readme.md">点击查看</a>
-        </home-item>
+      <home-block title="Document"> 
         <home-item name="查看帮助文档(GitLab)">
-          <a href="http://192.168.0.203:31590/XING/template-mobile/blob/master/static/readme.md">点击查看</a>
+          <a href="https://github.com/xlxwhy/vue-template-mobile/blob/master/README.md">点击查看</a>
         </home-item>
       </home-block>
 
@@ -20,16 +17,12 @@
         </home-item>
       </home-block>
       <home-block title="Template Test">
-        <home-item name="测试common-layer/ui/icon显示">
+        <home-item name="测试svg显示">
           <div class="success">
             <icon name="selected" />
           </div>
         </home-item>
-        <home-item name="测试common-layer/ui/components引用">
-          <div class="success">
-            <icon name="selected" />
-          </div>
-        </home-item>
+        {{#useCommonLayer }}
         <home-item name="测试common-layer中的MemberApi.js">
           <div v-if="test.api.state==0">
             <a href="#" @click="testMemberApi">点击测试</a>
@@ -40,6 +33,8 @@
           </div>
           <div v-if="test.api.state==3" class="error">错误：\{{test.api.message}}</div>
         </home-item>
+        {{/useCommonLayer }}
+
         <home-item name="测试404页面">
           <router-link :to="{path:'/nizhaobudaowo'}">点击查看</router-link>
         </home-item>
@@ -88,7 +83,7 @@ import TemplateNavBar from "../../components/template-nav-bar/Index.vue";
 import TemplateTabbar from "../../components/template-tabbar/Index.vue";
 import TemplatePage from "../../components/template-page/Index.vue";
 {{#useCommonLayer }}
-import MemberApi from "common-layer/apis/infra-member/MemberApi.js";
+import MemberApi from "common-layer/apis/infra-member/MemberApi.js"; 
 {{/useCommonLayer }}
 import VueProjects from "@/../static/vue-projects.js";
 export default {
