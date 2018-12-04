@@ -48,7 +48,7 @@ module.exports = {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
         include: [
-          {{useCommonLayer}}
+          {{#useCommonLayer}}
           resolve('node_modules/common-layer/ui/icons'),
           {{/useCommonLayer}}
           resolve('library/ui/icons')

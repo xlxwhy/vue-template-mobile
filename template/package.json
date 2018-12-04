@@ -26,7 +26,7 @@
     "vant": "1.3.10",
     {{#useCommonLayer }}
     "common-layer": "^1.0.0",
-    {{/#useCommonLayer }}
+    {{/useCommonLayer }}
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",

@@ -53,7 +53,7 @@ module.exports = {
     },
     useCommonLayer: {
       when: 'isNotTest',
-      type: 'string',
+      type: 'confirm',
       message: 'use common-layer?',
     },
 

@@ -8,7 +8,7 @@
     "restart": "npm run build && npm run start"
   },
   "dependencies": {
-    {{useCommonLayer}}
+    {{#useCommonLayer}}
     "common-layer": "^1.0.0",
     {{/useCommonLayer}}
     "body-parser": "~1.15.2",
