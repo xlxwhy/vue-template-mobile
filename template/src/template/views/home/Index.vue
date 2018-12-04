@@ -119,7 +119,7 @@ export default {
         active: 0,
         items: [
           {
-            icon: "home-fill",
+            icon: "home",
             name: "首页",
             link: {
               path: "/franchise/workbench/operator",
