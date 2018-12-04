@@ -87,7 +87,9 @@ import ColorItem from "../../components/home/ColorItem.vue";
 import TemplateNavBar from "../../components/template-nav-bar/Index.vue";
 import TemplateTabbar from "../../components/template-tabbar/Index.vue";
 import TemplatePage from "../../components/template-page/Index.vue";
+{{#useCommonLayer }}
 import MemberApi from "common-layer/apis/infra-member/MemberApi.js";
+{{/useCommonLayer }}
 import VueProjects from "@/../static/vue-projects.js";
 export default {
   data() {
@@ -162,6 +164,7 @@ export default {
   methods: {
     testMemberApi() {
       this.test.api.state = 1;
+      {{#useCommonLayer }}
       MemberApi.isSignin(
         {},
         res => {
@@ -176,6 +179,7 @@ export default {
           }
         }
       );
+      {{/useCommonLayer }}
     }
   }
 };

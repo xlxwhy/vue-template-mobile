@@ -51,6 +51,11 @@ module.exports = {
       type: 'string',
       message: 'Author',
     },
+    useCommonLayer: {
+      when: 'isNotTest',
+      type: 'string',
+      message: 'use common-layer?',
+    },
 
   },
   filters: {

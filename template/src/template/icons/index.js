@@ -1,10 +1,22 @@
 import Vue from 'vue'
+{{#useCommonLayer }}
 import Icon from 'common-layer/ui/components/icon/Index.vue'// svg组件
+{{else}}
+import Icon from '#/ui/components/icon/Index.vue'// svg组件
+{{/useCommonLayer }}
 
+
+  
 // register globally
 Vue.component('icon', Icon)
 
 const requireAll = requireContext => requireContext.keys().map(requireContext)
-const req = require.context('common-layer/ui/icons/svg', false, /\.svg$/)
 
-requireAll(req)
+ 
+{{#useCommonLayer }}
+requireAll(require.context('common-layer/ui/icons/svg', false, /\.svg$/))
+{{/useCommonLayer }}
+requireAll(require.context('#/ui/icons/svg', false, /\.svg$/))  
+
+
+
